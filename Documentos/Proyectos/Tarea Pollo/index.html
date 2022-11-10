@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <title>Tarea</title>
+</head>
+<body>
+    <div class="caja">
+    
+        <div class="titulo">
+            <div class="contenido">
+                <h1>Tienda</h1>
+            </div>
+        </div>
+
+        <div class="problema">
+            <div class="contenido">
+                <p class="parrafo">
+                    En la tienda tenemos los siguientes productos y sus cantidades:
+                </p>
+            </div>
+        </div>
+
+        <label for="leche">Leche: </label>
+        <input type="text" id="leche"> 
+
+        <br />
+
+        <label for="pan">Pan: </label>
+        <input type="text" id="pan"> 
+
+        <hr />
+
+        <div class="problema">
+            <div class="contenido">
+                <p class="parrafo">
+                    *Completa la lista para mandar a comprar a Juanito:
+                </p>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="titulo">
+            <div class="contenido">
+                <h3>" Lista de Compras de Juanito "</h3>
+            </div>
+        </div>
+
+        <label for="listadoLeche">*_Leche: </label>
+        <input type="text" id="listadoLeche"> 
+
+        <br />
+
+        <label for="listadoPan">*_Pan: </label>
+        <input type="text" id="listadoPan">
+        
+        <br />
+
+        <button class="boton" onclick=comprar()>
+            <div class="contenido">
+                <p class="texto">
+                    Comprar
+                </p>
+            </div>
+        </button>
+
+        <hr />
+
+        <div class="titulo">
+            <div class="contenido">
+                <h2>Resultado:</h2>
+            </div>
+        </div>
+
+        <div class="resultado" id="resultado">
+            <h4>* Juanito compro <p id="compraPan"></p> panes y <p id="compraLeche"></p> leche. *</h4> 
+            <h4>* Y en la tienda quedaron
+            <p id="tiendaPan"></p> panes y <p id="tiendaLeche"></p> leche. *</h4>
+        </div>
+
+
+    </div>
+
+    <script> 
+
+        const comprar = () => {
+
+            const leche = document.getElementById("leche").value;
+            const pan = document.getElementById("pan").value;
+
+            const listadoLeche = document.getElementById("listadoLeche").value;
+            const listadoPan = document.getElementById("listadoPan").value;
+
+            const resultadoLeche = leche - listadoLeche;
+
+            const resultadoPan = pan - listadoPan;
+
+            document.getElementById("resultado").style.display = 'block'
+
+            document.getElementById("compraLeche").innerHTML = listadoLeche; 
+
+            document.getElementById("compraPan").innerHTML = listadoPan; 
+
+            document.getElementById("tiendaLeche").innerHTML = resultadoLeche;
+
+            document.getElementById("tiendaPan").innerHTML = resultadoPan; 
+
+        };
+        
+    </script>
+
+</body>
+</html>

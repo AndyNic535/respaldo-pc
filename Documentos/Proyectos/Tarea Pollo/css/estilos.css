@@ -1,0 +1,24 @@
+
+input {
+    margin-bottom: 20px;
+    width: 30px;
+    text-align: center;
+}
+
+#resultado {
+    display: none;
+}
+
+h4 {
+    display: flex;
+}
+
+h4 p {
+    margin-left: 4px;
+    margin-right: 4px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: -0.2px;
+}
